@@ -2,21 +2,13 @@ import { Card, Grid, Row, Text } from "@nextui-org/react";
 import { Layout } from "../components/layouts";
 import { PokemonCard } from "../components/pokemon";
 
-
-const HomePage = ({pokemons}) => {
-
+const HomePage = ({ pokemons }) => {
   return (
     <Layout title="Listado de Pokemons">
-      <Grid.Container gap={2} justify="flex-start" >
-        {
-
-        pokemons.map((pokemons) => (
-
-       <PokemonCard key={pokemons.id} pokemons={pokemons} />
-
-        ))
-        
-        }
+      <Grid.Container gap={2} justify="flex-start">
+        {pokemons.map((pokemons) => (
+          <PokemonCard key={pokemons.id} pokemons={pokemons} />
+        ))}
       </Grid.Container>
     </Layout>
   );
